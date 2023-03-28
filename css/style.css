@@ -36,6 +36,31 @@ header {
     margin: 0 auto;
 }
 
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1152px;
+    }
+  }
+
+
 header nav .left a {
     color: var(--pure);
     text-decoration: none;
@@ -413,11 +438,6 @@ footer .copyright  h3{
     color: var(--light);
 }
 
-@media(max-width:1285px){
-    header #main-nav{
-        display: none;
-    }
-}
 .site-main-wrapper{
     position: relative;
 }
@@ -459,11 +479,11 @@ footer .copyright  h3{
 }
 
 .open{
-    transform: translateX(0%);
-    -webkit-transform: translateX(0%);
-    -moz-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    -o-transform: translateX(0%);
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
 }
 .times{
     position: fixed;
@@ -484,4 +504,42 @@ footer .copyright  h3{
     color: var(--secondary);
     text-decoration: none;
     font-size: 1.5rem;
+}
+
+@media(max-width:1024px){
+    header #main-nav{
+        display: none;
+    }
+    .hero .left img{
+        width:510px;
+    }
+    .hero .right h1{
+        font-size: 3rem;
+    }
+    .hero{
+        padding-top:10 rem;
+    }
+    header{
+
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 93%, 0 100%);
+    }
+    section.about .about-me-img{
+        height: 310px;
+       margin-right: 4rem;
+        margin-left: -3rem;
+    }
+    section.services .card-wrapper {
+        
+        grid-template-columns: repeat(2,1fr);  
+}
+
+section.projects .card-wrapper .card .card-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+}
+section.projects .card-wrapper {
+    grid-gap: 2rem;
+}
+
 }
